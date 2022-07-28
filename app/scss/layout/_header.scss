@@ -8,9 +8,6 @@
     
 
     &__logo {
-        /// neumorphism effect
-        border: 1px solid red;
-
         width: 10%;
         height: $headervh;
         display: flex;
@@ -29,7 +26,7 @@
             border: none;
             width: 5rem;
             height: 5rem;
-            
+
             &-text {
                 font-family: "Yuji Boku", serif;
                 font-weight: 100;

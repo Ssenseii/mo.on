@@ -23,7 +23,7 @@
                 height: 4rem;
                 margin-bottom: 2rem;
 
-                border: none;
+                border: transparent;
                 border-radius: 50%;
 
                 @include neu;
@@ -34,7 +34,6 @@
 
                 &-icon{
                     width: 80%;
-
                 }
             }
         }

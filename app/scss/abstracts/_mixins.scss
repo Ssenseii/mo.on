@@ -9,3 +9,9 @@
     background: linear-gradient(145deg, #bec3d0, #e2e8f7);
     box-shadow: 26px 26px 51px #c2c8d5, -26px -26px 51px #e4eaf9;
 }
+
+@mixin mainKey{
+    box-shadow: 26px 26px 51px #c2c8d5, -26px -26px 51px #e4eaf9;
+}
+
+
