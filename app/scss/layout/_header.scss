@@ -1,11 +1,11 @@
 .header {
     width: 100%;
-    height: $headervh;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     
+    margin-bottom: 1rem;
 
     &__logo {
         width: 10%;
@@ -13,19 +13,17 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
         
-        
-        &:active {
-            @include neuActive;
-        }
-
         &-btn{
-
             @include neu;
             border: none;
             width: 5rem;
             height: 5rem;
+            
+            &:active {
+            @include neuActive;
+        }
+
 
             &-text {
                 font-family: "Yuji Boku", serif;

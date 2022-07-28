@@ -3,8 +3,10 @@
     flex-flow: row wrap;
     &__aside{
         // border: 1px solid #fff;
+
+        margin-top: 2rem;
         width: 10%;
-        height: calc(100vh - $headervh);
+        height: $wrappervh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -12,7 +14,7 @@
         &-buttons{
             // border: 1px solid #000;
             width: 60%;
-            height: 90%;
+            height: $wrappervh;
 
             display: flex;
             flex-direction: column;
@@ -20,20 +22,30 @@
 
             &-element{
                 width: 4rem;
-                height: 4rem;
+                min-height: 4rem;
                 margin-bottom: 2rem;
 
                 border: transparent;
                 border-radius: 50%;
 
+                display: flex;
+                flex-direction: center;
+                justify-content: center;
+                align-items: center;
                 @include neu;
+
+                &:last-child{
+                    background: $bluePastel;
+                    display: flex;
+                }
 
                 &:active{
                     @include neuActive;
                 }
 
                 &-icon{
-                    width: 80%;
+                    width: 3rem;
+                    height: 3rem;
                 }
             }
         }
@@ -44,6 +56,6 @@
         // border: 1px solid #fff;
         border-top-left-radius: 25px;
         width: 90%;
-        height: calc(100vh - $headervh);
+        height: $wrappervh;
     }
 }
