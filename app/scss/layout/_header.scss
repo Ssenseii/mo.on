@@ -9,14 +9,10 @@
 
     &__logo {
         /// neumorphism effect
-        border: transparent;
-        @include neu;
+        border: 1px solid red;
 
-        width: 5%;
-        padding: 1rem;
-        margin: 1rem 0rem 1rem 2rem;
-        
-
+        width: 10%;
+        height: $headervh;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -27,10 +23,18 @@
             @include neuActive;
         }
 
-        &-text {
-            font-family: "Yuji Boku", serif;
-            font-weight: 100;
-            font-size: 36px;
+        &-btn{
+
+            @include neu;
+            border: none;
+            width: 5rem;
+            height: 5rem;
+            
+            &-text {
+                font-family: "Yuji Boku", serif;
+                font-weight: 100;
+                font-size: 36px;
+            }
         }
     }
 

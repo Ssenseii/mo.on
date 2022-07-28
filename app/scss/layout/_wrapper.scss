@@ -3,7 +3,7 @@
     flex-flow: row wrap;
     &__aside{
         // border: 1px solid #fff;
-        width: 9%;
+        width: 10%;
         height: calc(100vh - $headervh);
         display: flex;
         justify-content: center;
@@ -44,7 +44,7 @@
         background-color: lighten($base, 5%);
         // border: 1px solid #fff;
         border-top-left-radius: 25px;
-        width: 91%;
+        width: 90%;
         height: calc(100vh - $headervh);
     }
 }
