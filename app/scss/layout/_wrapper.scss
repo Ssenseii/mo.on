@@ -1,6 +1,8 @@
 .wrapper{
     display: flex;
     flex-flow: row wrap;
+    
+    /// aside
     &__aside{
         padding-top: 2rem;
         width: 10%;
@@ -53,6 +55,7 @@
         }
     }
 
+    /// main
     &__main{
         background-color: lighten($base, 5%);
         border-top-left-radius: 25px;
@@ -60,9 +63,60 @@
         height: $wrappervh;
         padding: 2rem;
 
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        align-items: center;
+
         &-notes{
             display: flex;
             flex-flow: row wrap;
+            justify-self: flex-start;
+            align-self: flex-start;
+        }
+
+        &-editor{
+            width: 40%;
+            height: $editorvh;
+            padding: 2rem;
+
+            display: flex;
+            flex-direction:column;
+            align-items: center;
+            
+            background-color: $bgColor;
+
+            border-radius: 25px;
+
+            font-family: 'Raleway', sans-serif;
+
+            &-title{
+                width: 90%;
+                height: 3rem;
+
+                font-size: $fnt_big;
+                @include noteEditorStyle;
+            }
+
+            &-note{
+                width: 90%;
+                height: $noteEditorvh;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                
+                @include noteEditorStyle;
+
+                font-family: 'Raleway', sans-serif;
+            }
+
+            &-submit{
+                width: 50%;
+                height: 3rem;
+
+                border-radius: 25px;
+                border: 1px solid $bgColor;
+                outline: none;
+            }
         }
     }
 }

@@ -15,8 +15,18 @@ $dark-gray: #3c3c3c;
 /// sizes 
 $headervh : 12vh;
 $wrappervh: calc(100vh - $headervh);
-
+$editorvh: calc($wrappervh - 10vh);
+$noteEditorvh: calc($editorvh - 20vh);
 
 /// util
 
 $bgColor: #d3d9e7;
+
+
+/// font sizes;
+
+$fnt_tiny: 8px;
+$fnt_small: 12px;
+$fnt_average: 16px;
+$fnt_big: 20px;
+$fnt_huge: 36px;
