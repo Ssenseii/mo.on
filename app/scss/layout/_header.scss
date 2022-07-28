@@ -1,7 +1,6 @@
 .header {
     width: 100%;
-    border: 1px solid #000;
-
+    height: $headervh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -40,7 +39,10 @@
     }
 
     &__util{
-
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
         &-clock{
             margin-right: 2rem;
         }

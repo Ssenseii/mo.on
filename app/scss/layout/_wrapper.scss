@@ -1,0 +1,24 @@
+.wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    &__aside{
+        border: 1px solid #fff;
+        width: 9%;
+        height: calc(100vh - $headervh);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        &-buttons{
+            border: 1px solid #000;
+            width: 50%;
+            height: 90%;
+        }
+    }
+
+    &__main{
+        border: 1px solid #fff;
+        width: 91%;
+        height: calc(100vh - $headervh);
+    }
+}

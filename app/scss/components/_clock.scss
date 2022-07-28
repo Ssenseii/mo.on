@@ -1,7 +1,11 @@
 .clock {
     width: 3rem;
     height: 3rem;
-    @include neu;
+    border-radius: 47px;
+background: linear-gradient(145deg, #e3e8f3, #cbd1de);
+box-shadow:  14px 14px 28px #dbe1f0,
+             -14px -14px 28px #d9dfec
+             ;
     margin: auto;
     position: relative;
 }
@@ -21,7 +25,6 @@
     -moz-transform: rotate(90deg);
     transform: rotate(90deg);
 }
-
 
 .inner-clock-face {
     position: absolute;
