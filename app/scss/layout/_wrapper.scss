@@ -2,9 +2,7 @@
     display: flex;
     flex-flow: row wrap;
     &__aside{
-        // border: 1px solid #fff;
-
-        margin-top: 2rem;
+        padding-top: 2rem;
         width: 10%;
         height: $wrappervh;
         display: flex;
@@ -12,7 +10,7 @@
         align-items: center;
 
         &-buttons{
-            // border: 1px solid #000;
+            
             width: 60%;
             height: $wrappervh;
 
@@ -34,6 +32,10 @@
                 align-items: center;
                 @include neu;
 
+                &:hover{
+                    cursor: pointer;
+                }
+
                 &:last-child{
                     background: $bluePastel;
                     display: flex;
@@ -53,7 +55,6 @@
 
     &__main{
         background-color: lighten($base, 5%);
-        // border: 1px solid #fff;
         border-top-left-radius: 25px;
         width: 90%;
         height: $wrappervh;

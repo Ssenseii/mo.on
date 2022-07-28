@@ -19,6 +19,10 @@
             border: none;
             width: 5rem;
             height: 5rem;
+
+            &:hover{
+                    cursor: pointer;
+                }
             
             &:active {
             @include neuActive;
