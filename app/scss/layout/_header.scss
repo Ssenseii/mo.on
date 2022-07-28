@@ -1,0 +1,35 @@
+.header {
+    width: 100%;
+    border: 1px solid #000;
+
+    &__logo {
+        /// neumorphism effect
+        border: transparent;
+        @include neu;
+
+        width: 5%;
+        padding: 1rem;
+        margin: 1rem 0rem 1rem 2rem;
+        
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        
+        
+        &:active {
+            @include neuActive;
+        }
+
+        
+        
+
+
+        &-text {
+            font-family: "Yuji Boku", serif;
+            font-weight: 100;
+            font-size: 36px;
+        }
+    }
+}
