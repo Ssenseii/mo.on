@@ -1,40 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="apple-touch-icon" sizes="180x180" href="app/images/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="app/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="app/images/favicon/favicon-16x16.png">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mo.on</title>
+    <head>
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="app/images/favicon/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="app/images/favicon/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="app/images/favicon/favicon-16x16.png"
+        />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>mo.on</title>
 
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap" rel="stylesheet">
+        <!-- fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap"
+            rel="stylesheet"
+        />
 
-    <!-- font-family: 'Yuji Boku', serif; -->
+        <!-- font-family: 'Yuji Boku', serif; -->
 
-    <link rel="stylesheet" href="dist/style.css">
-</head>
-<body>
+        <link rel="stylesheet" href="dist/style.css" />
+    </head>
+    <body>
+        <!-- header -->
+        <header class="header">
+            <button class="header__logo">
+                <h1 class="header__logo-text">月</h1>
+            </button>
+            <div class="header__util">
+                <div class="header__util-clock">
+                    <div class="clock">
+                        <div class="outer-clock-face">
+                            <div class="inner-clock-face">
+                                <div class="hand hour-hand"></div>
+                                <div class="hand min-hand"></div>
+                                <div class="hand second-hand"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__util-search"></div>
+            </div>
+        </header>
 
-    <!-- header -->
-    <header class="header">
-        <button class="header__logo">
-            <h1 class="header__logo-text">月</h1>
-        </button>
-        <div class="header__search"></div>
-    </header>
-
-    <!-- wrapper -->
-    <wrapper class="wrapper">
-        <aside class="wrapper__aside"></aside>
-        <main class="wrapper__main"></main>
-    </wrapper>
-
-
-</body>
-<script src="app/js/script.js"></script>
+        <!-- wrapper -->
+        <wrapper class="wrapper">
+            <aside class="wrapper__aside"></aside>
+            <main class="wrapper__main"></main>
+        </wrapper>
+    </body>
+    <script src="app/js/script.js"></script>
 </html>

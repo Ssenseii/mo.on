@@ -2,6 +2,12 @@
     width: 100%;
     border: 1px solid #000;
 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+
     &__logo {
         /// neumorphism effect
         border: transparent;
@@ -30,6 +36,13 @@
             font-family: "Yuji Boku", serif;
             font-weight: 100;
             font-size: 36px;
+        }
+    }
+
+    &__util{
+
+        &-clock{
+            margin-right: 2rem;
         }
     }
 }
