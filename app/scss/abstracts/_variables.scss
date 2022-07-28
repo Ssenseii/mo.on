@@ -5,7 +5,7 @@ $peach: #fb5849;
 $light-peach: #fc6476;
     ///blue
 $base: #D3D9E7;
-$bluePastel: rgb(102, 192, 220);
+$bluePastel: #66c0dc;
 
     ///gray
 $dark-gray: #3c3c3c;
@@ -15,3 +15,8 @@ $dark-gray: #3c3c3c;
 /// sizes 
 $headervh : 12vh;
 $wrappervh: calc(100vh - $headervh);
+
+
+/// util
+
+$bgColor: #d3d9e7;

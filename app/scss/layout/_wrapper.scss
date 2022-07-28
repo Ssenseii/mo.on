@@ -57,5 +57,11 @@
         border-top-left-radius: 25px;
         width: 90%;
         height: $wrappervh;
+        padding: 2rem;
+
+        &-notes{
+            display: flex;
+            flex-flow: row wrap;
+        }
     }
 }
