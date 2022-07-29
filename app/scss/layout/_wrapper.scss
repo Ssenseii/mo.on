@@ -1,9 +1,9 @@
-.wrapper{
+.wrapper {
     display: flex;
     flex-flow: row wrap;
-    
+
     /// aside
-    &__aside{
+    &__aside {
         padding-top: 2rem;
         width: 10%;
         height: $wrappervh;
@@ -11,8 +11,7 @@
         justify-content: center;
         align-items: center;
 
-        &-buttons{
-            
+        &-buttons {
             width: 60%;
             height: $wrappervh;
 
@@ -20,7 +19,7 @@
             flex-direction: column;
             align-items: center;
 
-            &-element{
+            &-element {
                 width: 4rem;
                 min-height: 4rem;
                 margin-bottom: 2rem;
@@ -34,20 +33,20 @@
                 align-items: center;
                 @include neu;
 
-                &:hover{
+                &:hover {
                     cursor: pointer;
                 }
 
-                &:last-child{
+                &:last-child {
                     background: $bluePastel;
                     display: flex;
                 }
 
-                &:active{
+                &:active {
                     @include neuActive;
                 }
 
-                &-icon{
+                &-icon {
                     width: 3rem;
                     height: 3rem;
                 }
@@ -56,7 +55,7 @@
     }
 
     /// main
-    &__main{
+    &__main {
         background-color: lighten($base, 5%);
         border-top-left-radius: 25px;
         width: 90%;
@@ -68,29 +67,30 @@
         justify-items: center;
         align-items: center;
 
-        &-notes{
+        &-notes {
             display: flex;
             flex-flow: row wrap;
             justify-self: flex-start;
             align-self: flex-start;
         }
 
-        &-editor{
+        &-editor {
+            display: none;
             width: 40%;
             height: $editorvh;
             padding: 2rem;
 
-            display: flex;
-            flex-direction:column;
+
+            flex-direction: column;
             align-items: center;
-            
+
             background-color: $bgColor;
 
             border-radius: 25px;
 
-            font-family: 'Raleway', sans-serif;
+            font-family: "Raleway", sans-serif;
 
-            &-title{
+            &-title {
                 width: 90%;
                 height: 3rem;
 
@@ -98,24 +98,58 @@
                 @include noteEditorStyle;
             }
 
-            &-note{
+            &-note {
                 width: 90%;
                 height: $noteEditorvh;
                 padding-top: 1rem;
                 padding-bottom: 1rem;
-                
+
                 @include noteEditorStyle;
 
-                font-family: 'Raleway', sans-serif;
+                font-family: "Raleway", sans-serif;
+
+                resize: none;
+
+                &:hover {
+                    cursor: text;
+                }
             }
 
-            &-submit{
-                width: 50%;
-                height: 3rem;
+            &-buttons {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: space-between;
+                align-items: center;
+                width: 90%;
 
-                border-radius: 25px;
-                border: 1px solid $bgColor;
-                outline: none;
+                &-submit {
+                    width: 50%;
+                    height: 3rem;
+
+                    border-radius: 25px;
+                    border: 1px solid $bgColor;
+                    outline: none;
+
+                    box-shadow: 8px 7px 5px -1px rgba(183, 192, 213, 0.75);
+
+                    &:hover {
+                        cursor: pointer;
+                        border: 1px solid darken($bgColor, 50%);
+                    }
+
+                    &:active {
+                        position: relative;
+                        box-shadow: none;
+                        top: 1px;
+                    }
+                }
+
+                &-close {
+                    @include settingButton;
+
+                    width: 2rem;
+                    height: 2rem;
+                }
             }
         }
     }

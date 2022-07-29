@@ -22,3 +22,18 @@
 
     background-color: lighten($bgColor, 10%);
 }
+
+@mixin settingButton{
+            border: 1px solid darken($bgColor, 25%);
+            border-radius: 50%;
+
+            width: 1rem;
+            height: 1rem;
+
+            background-color: transparent;
+
+            &:hover{
+                cursor: pointer;
+                background: $peach;
+            } 
+}

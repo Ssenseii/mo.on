@@ -115,7 +115,7 @@
                             alt="search"
                         />
                     </button>
-                    <button class="wrapper__aside-buttons-element">
+                    <button id="addNote" class="wrapper__aside-buttons-element">
                         <img
                             class="wrapper__aside-buttons-element-icon add"
                             src="app/images/icons/add.png"
@@ -125,13 +125,19 @@
                 </div>
             </aside>
             <main class="wrapper__main">
-                <form class="wrapper__main-editor" action="#">
+
+                <!-- editor -->
+                <form id="editor" class="wrapper__main-editor" action="#">
                     <input type="text" class="wrapper__main-editor-title">
                     <textarea class="wrapper__main-editor-note" name="note" id="noteWriter" cols="30" rows="10"></textarea>
-                    <input value="Add to Notes" type="button" class="wrapper__main-editor-submit">
+                    <div class="wrapper__main-editor-buttons">
+                        <input value="Add to Notes" type="button" class="wrapper__main-editor-buttons-submit">
+                        <button id="closeEditor" class="wrapper__main-editor-buttons-close"></button>
+                    </div>
                 </form>
+
                 <!-- notes -->
-                <ul class="wrapper__main-notes">
+                <ul id="notes" class="wrapper__main-notes">
                     <li class="note">
                         <div class="note__detail">
                             <h3 class="note__detail-title">Note Title</h3>
@@ -141,9 +147,8 @@
                             >
                         </div>
                         <div class="note__extra">
-                            <button onclick="return display()" class="note__extra-settings">
+                            <button class="note__extra-settings">
                                 <ul class="menu">
-
                                     <li class="menu__item">Delete</li>
                                 </ul>
                             </button>
