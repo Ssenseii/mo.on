@@ -67,6 +67,8 @@
         justify-items: center;
         align-items: center;
 
+        overflow: hidden;
+
         &-notes {
             display: flex;
             flex-flow: row wrap;
@@ -79,7 +81,6 @@
             width: 40%;
             height: $editorvh;
             padding: 2rem;
-
 
             flex-direction: column;
             align-items: center;

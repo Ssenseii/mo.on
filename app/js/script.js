@@ -33,9 +33,6 @@ var notes = document.getElementById("notes");
 var closeEditor = document.getElementById("closeEditor");
 
 addNote.addEventListener("click", function(){
-    notes.style.transform = "translateY(10rem)";
-    notes.style.opacity = "0";
-    notes.style.transition = "all 0.3s ease-in-out";
     setTimeout(() => {
         editor.classList.add("showFlex");
         notes.classList.add("hide");
@@ -44,9 +41,6 @@ addNote.addEventListener("click", function(){
 })
 
 closeEditor.addEventListener("click", function(){
-    notes.style.transform = "none";
-    notes.style.opacity = "1";
-    notes.style.transition = "all 0.3s ease-in-out";
     setTimeout(() => {
         editor.classList.remove("showFlex");
         notes.classList.remove("hide");
