@@ -62,12 +62,9 @@
         height: $wrappervh;
         padding: 2rem;
 
-        display: flex;
         flex-direction: column;
         justify-items: center;
         align-items: center;
-
-        overflow: hidden;
 
         &-notes {
             display: flex;
@@ -77,10 +74,10 @@
         }
 
         &-editor {
-            display: none;
             width: 40%;
             height: $editorvh;
             padding: 2rem;
+
 
             flex-direction: column;
             align-items: center;
@@ -90,6 +87,8 @@
             border-radius: 25px;
 
             font-family: "Raleway", sans-serif;
+
+            transform: translateY(-40rem);
 
             &-title {
                 width: 90%;
