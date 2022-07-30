@@ -5,6 +5,8 @@ $peach: #fb5849;
 $light-peach: #fc6476;
     ///blue
 $base: #D3D9E7;
+$lightBase: lighten($base, 5%);
+$lighterBase: lighten($base, 7%);
 $bluePastel: #66c0dc;
 
     ///gray

@@ -57,12 +57,13 @@
 
     /// main
     &__main {
-        background-color: lighten($base, 5%);
+        background-color: $lightBase;
         border-top-left-radius: 25px;
         width: 90%;
         height: $wrappervh;
         padding: 2rem;
 
+        display: flex;
         flex-direction: column;
         justify-items: center;
         align-items: center;
@@ -83,12 +84,13 @@
             flex-direction: column;
             align-items: center;
 
-            background-color: $bgColor;
+            border-radius: 50px;
+            
+            @include neuNote;
 
             border-radius: 25px;
 
             font-family: "Raleway", sans-serif;
-
 
             &-title {
                 width: 90%;

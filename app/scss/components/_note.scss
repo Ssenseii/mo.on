@@ -1,63 +1,54 @@
-.note{
+.note {
     max-width: 16rem;
     max-height: 14rem;
-    
+
     margin: 1rem;
-    
-    border: 1px solid darken($bgColor, 20%);
+
     border-radius: 25px;
 
     display: flex;
     flex-direction: column;
 
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
 
     cursor: pointer;
 
 
-    &:hover{
-        border: 1px solid darken($bgColor, 50%);
+    @include neuNote;
 
-    }
-
-    &__detail{
+    &__detail {
         padding: 2rem;
-        background-color: $bgColor;
 
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
-        
-        &-title{
+
+        &-title {
             font-weight: 700;
             margin-bottom: 1rem;
         }
 
-        &-snippet{
+        &-snippet {
             font-weight: 300;
         }
     }
 
-
-    &__extra{
+    &__extra {
         border-bottom-left-radius: 25px;
         border-bottom-right-radius: 25px;
-        
+
         padding-top: 8px;
         padding-inline: 2rem;
         padding-bottom: 8px;
 
-
-        background-color: darken($bgColor, 5%);
         display: flex;
         justify-content: space-between;
 
         font-size: 12px;
 
-        &-settings{
-            
+        &-settings {
             @include settingButton;
 
-            &:hover > .menu{
+            &:hover > .menu {
                 transform: scale(1);
                 transition: transform 0.3s ease-in-out;
             }
@@ -65,21 +56,20 @@
     }
 }
 
-.menu{
+.menu {
     padding: 8px;
     width: 5rem;
-    
+
     position: relative;
     top: 1rem;
     left: 1rem;
-    
+
     background-color: lighten($bgColor, 10%);
-    
+
     border: 1px solid darken($bgColor, 50%);
     border-top-right-radius: 25px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
 
     transform: scale(0);
-
 }
