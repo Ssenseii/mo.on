@@ -1,0 +1,19 @@
+.riseEditor{
+    animation: riseToHeaven 0.5s ease-in-out;
+    display: none;
+}
+
+.dropEditor{
+    animation: dropFromHeaven 0.5s ease-in-out;
+    display: flex;
+}
+
+.riseNotes{
+    animation: riseFromAbyss 0.5s ease-in-out;
+    display: flex;
+}
+
+.dropNotes{
+    animation: dropToAbyss 0.5s ease-in-out;
+    display: none;
+}   

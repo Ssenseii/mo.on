@@ -25,12 +25,24 @@ setInterval(setDate, 1000);
 setDate();
 
 
+/// page refresh stop
+
+var form = document.getElementById("editor");
+function handleForm(event) { event.preventDefault(); }
+form.addEventListener('submit', handleForm);
+
+
 /// Adding a Note
 
 var addNote = document.getElementById("addNote");
 var editor = document.getElementById("editor");
 var notes = document.getElementById("notes");
+
 var closeEditor = document.getElementById("closeEditor");
+var addEditor = document.getElementById("addEditor");
+
+var titleGrab = document.getElementById("titleGrab");
+var textGrab = document.getElementById("textGrab"); 
 
 addNote.addEventListener("click", function(){
     notes.classList.add("dropNotes");
@@ -55,5 +67,12 @@ closeEditor.addEventListener("click", function(){
         notes.style.display = "flex";
         editor.style.display = "none";
     }, 500);
+})
+
+addEditor.addEventListener("click", e =>{
+    e.preventDefault();
+    let noteTitle = titleGrab.value;
+    let noteText = textGrab.value;
+    console.log(noteTitle, noteText)
 })
 
