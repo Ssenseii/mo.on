@@ -33,22 +33,27 @@ var notes = document.getElementById("notes");
 var closeEditor = document.getElementById("closeEditor");
 
 addNote.addEventListener("click", function(){
-    notes.classList.toggle("dropNotes");
-    editor.classList.toggle("riseEditor");
+    notes.classList.add("dropNotes");
+    notes.classList.remove("riseNotes");
 
-
+    editor.classList.add("dropEditor");
+    editor.classList.remove("riseEditor");
     setTimeout(() => {
-        editor.style.transform = "none";
+        notes.style.display = "none";
+        editor.style.display = "flex";
     }, 500);
 
 })
 
 closeEditor.addEventListener("click", function(){
-    notes.classList.toggle("riseNotes");
-    editor.classList.toggle("dropEditor");
+    notes.classList.add("riseNotes");
+    notes.classList.remove("dropNotes");
 
+    editor.classList.add("riseEditor");
+    editor.classList.remove("dropEditor")
     setTimeout(() => {
-        editor.style.transform = "null";
+        notes.style.display = "flex";
+        editor.style.display = "none";
     }, 500);
 })
 
