@@ -10,12 +10,15 @@
     box-shadow: 26px 26px 51px #c2c8d5, -26px -26px 51px #e4eaf9;
 }
 
-@mixin neuNote{
+@mixin neuNote {
     background: linear-gradient(145deg, $lightBase, #cdd0d8);
     box-shadow: 20px 20px 60px #d4d7df, -20px -20px 60px $lighterBase;
 }
 
-
+@mixin neuEditor {
+    background: #e4e7f0;
+    box-shadow: 6px 6px 12px #bbbfcf, -6px -6px 12px $lightBase;
+}
 
 @mixin noteEditorStyle {
     padding-inline: 1rem;
@@ -28,17 +31,17 @@
     background-color: lighten($bgColor, 10%);
 }
 
-@mixin settingButton{
-            border: 1px solid darken($bgColor, 25%);
-            border-radius: 50%;
+@mixin settingButton {
+    border: 1px solid darken($bgColor, 25%);
+    border-radius: 50%;
 
-            width: 1rem;
-            height: 1rem;
+    width: 1rem;
+    height: 1rem;
 
-            background-color: transparent;
+    background-color: transparent;
 
-            &:hover{
-                cursor: pointer;
-                background: $peach;
-            } 
+    &:hover {
+        cursor: pointer;
+        background: $peach;
+    }
 }
