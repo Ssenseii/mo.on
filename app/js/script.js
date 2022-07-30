@@ -44,6 +44,8 @@ var addEditor = document.getElementById("addEditor");
 var titleGrab = document.getElementById("titleGrab");
 var textGrab = document.getElementById("textGrab"); 
 
+const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
 addNote.addEventListener("click", function(){
     notes.classList.add("dropNotes");
     notes.classList.remove("riseNotes");
@@ -73,6 +75,20 @@ addEditor.addEventListener("click", e =>{
     e.preventDefault();
     let noteTitle = titleGrab.value;
     let noteText = textGrab.value;
-    console.log(noteTitle, noteText)
+    
+    if(noteTitle || noteText){
+        let dateObj = new Date();
+        let day = dateObj.getDate();
+        let month = months[dateObj.getMonth()];
+        let year = dateObj.getFullYear();
+
+        let noteInfo = {
+            title: noteTitle,
+            text: noteText,
+            date: month + " " + day+ ", " + year
+        }
+
+        console.log(noteInfo);
+    }
 })
 
