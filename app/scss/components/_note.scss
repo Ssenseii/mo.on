@@ -1,5 +1,6 @@
 .note {
     max-width: 16rem;
+    min-width: 16rem;
     max-height: 14rem;
 
     margin: 1rem;
@@ -22,13 +23,20 @@
         border-top-left-radius: 25px;
         border-top-right-radius: 25px;
 
+        min-height: 10rem;
+        max-height: 10rem;
+
+        overflow: hidden;
+
         &-title {
             font-weight: 700;
             margin-bottom: 1rem;
         }
 
         &-snippet {
+            min-height: 5rem;
             font-weight: 300;
+            line-height: 1.5;
         }
     }
 

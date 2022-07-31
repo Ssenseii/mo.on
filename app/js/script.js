@@ -25,7 +25,7 @@ setInterval(setDate, 1000);
 setDate();
 
 
-/// page refresh stop
+// /// page refresh stop
 
 var form = document.getElementById("editor");
 function handleForm(event) { event.preventDefault(); }
@@ -37,16 +37,21 @@ form.addEventListener('submit', handleForm);
 var addNote = document.getElementById("addNote");
 var editor = document.getElementById("editor");
 var notes = document.getElementById("notes");
+var notesExample = document.getElementById("notesExample");
 
 var closeEditor = document.getElementById("closeEditor");
 var addEditor = document.getElementById("addEditor");
 
 var titleGrab = document.getElementById("titleGrab");
-var textGrab = document.getElementById("textGrab"); 
+var textGrab = document.getElementById("textGrab");
 
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-addNote.addEventListener("click", function(){
+const notesJS = JSON.parse(localStorage.getItem("notesJS") || "[]");
+
+/// blue add button
+
+addNote.addEventListener("click", function () {
     notes.classList.add("dropNotes");
     notes.classList.remove("riseNotes");
 
@@ -59,7 +64,9 @@ addNote.addEventListener("click", function(){
 
 })
 
-closeEditor.addEventListener("click", function(){
+/// peach close button
+
+closeEditor.addEventListener("click", function () {
     notes.classList.add("riseNotes");
     notes.classList.remove("dropNotes");
 
@@ -71,12 +78,23 @@ closeEditor.addEventListener("click", function(){
     }, 500);
 })
 
-addEditor.addEventListener("click", e =>{
+/// showing notes
+
+function showNotes() {
+    notesJS.forEach((note) => {
+        let liTag = '<li class="note"><div class="note__detail"><h3 class="note__detail-title">'+ (note.title) + '</h3><span class="note__detail-snippet">' + (note.text) + '</span></div ><div class="note__extra"><button class="note__extra-settings"><ul class="menu"><li class="menu__item">Delete</li></ul></button><span class="note__extra-date">' + (note.date) + '</span></div></li > ';
+
+        notesExample.insertAdjacentHTML("afterend", liTag);
+    })}
+
+showNotes();
+
+addEditor.addEventListener("click", e => {
     e.preventDefault();
     let noteTitle = titleGrab.value;
     let noteText = textGrab.value;
-    
-    if(noteTitle || noteText){
+
+    if (noteTitle || noteText) {
         let dateObj = new Date();
         let day = dateObj.getDate();
         let month = months[dateObj.getMonth()];
@@ -85,10 +103,16 @@ addEditor.addEventListener("click", e =>{
         let noteInfo = {
             title: noteTitle,
             text: noteText,
-            date: month + " " + day+ ", " + year
+            date: month + " " + day + ", " + year
         }
 
-        console.log(noteInfo);
+        notesJS.push(noteInfo);
+        localStorage.setItem("notesJS", JSON.stringify(notesJS));
+        closeEditor.click();
+
+        setTimeout(() => {
+            location.reload();
+        }, 1000);
     }
 })
 
