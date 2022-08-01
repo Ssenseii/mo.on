@@ -48,6 +48,8 @@ var textGrab = document.getElementById("textGrab");
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
 const notesJS = JSON.parse(localStorage.getItem("notesJS") || "[]");
+let isUpdate = false, updateId;
+
 
 /// blue add button
 
@@ -82,25 +84,6 @@ closeEditor.addEventListener("click", function () {
 })
 
 
-/// delete note
-
-function deleteNote(noteId){
-    notesJS.splice(noteId, 1);
-    localStorage.setItem("notesJS", JSON.stringify(notesJS));
-
-    setTimeout(() => {
-        location.reload();
-    }, 200);
-}
-
-/// update note
-
-function updateNote(index, title, text){
-    addNote.click();
-    
-    console.log(index, title, text)
-}
-
 /// showing notes
 
 function showNotes() {
@@ -130,7 +113,12 @@ addEditor.addEventListener("click", e => {
             date: month + " " + day + ", " + year
         }
 
-        notesJS.push(noteInfo);
+        if(!isUpdate){
+            notesJS.push(noteInfo);
+        } else{
+            notesJS[updateId] = noteInfo;
+        }
+
         localStorage.setItem("notesJS", JSON.stringify(notesJS));
         closeEditor.click();
 
@@ -139,4 +127,26 @@ addEditor.addEventListener("click", e => {
         }, 1000);
     }
 })
+
+
+/// delete note
+
+function deleteNote(noteId) {
+    notesJS.splice(noteId, 1);
+    localStorage.setItem("notesJS", JSON.stringify(notesJS));
+
+    setTimeout(() => {
+        location.reload();
+    }, 200);
+}
+
+/// update note
+
+function updateNote(noteId, title, text) {
+    isUpdate = true;
+    updateId = noteId;
+    addNote.click();
+    titleGrab.value = title;
+    textGrab.value = text;
+}
 
