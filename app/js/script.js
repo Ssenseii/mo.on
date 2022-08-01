@@ -92,11 +92,20 @@ function deleteNote(noteId){
         location.reload();
     }, 200);
 }
+
+/// update note
+
+function updateNote(index, title, text){
+    addNote.click();
+    
+    console.log(index, title, text)
+}
+
 /// showing notes
 
 function showNotes() {
     notesJS.forEach((note, index) => {
-        let liTag = '<li class="note"><div class="note__detail"><h3 class="note__detail-title">'+ (note.title) + '</h3><span class="note__detail-snippet">' + (note.text) + '</span></div ><div class="note__extra"><button onclick= deleteNote('+ (index) +') class="note__extra-settings"><ul class="menu"><li class="menu__item">Delete</li></ul></button><span class="note__extra-date">' + (note.date) + '</span></div></li > ';
+        let liTag = '<li onclick="updateNote(' + (index) + ',` ' + (note.title) + '`,`' + (note.text) + '`)" class="note"><div class="note__detail"><h3 class="note__detail-title">'+ (note.title) + '</h3><span class="note__detail-snippet">' + (note.text) + '</span></div ><div class="note__extra"><button onclick= deleteNote('+ (index) +') class="note__extra-settings"><ul class="menu"><li class="menu__item">Delete</li></ul></button><span class="note__extra-date">' + (note.date) + '</span></div></li > ';
 
         notesExample.insertAdjacentHTML("afterend", liTag);
     })}
