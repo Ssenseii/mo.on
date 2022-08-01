@@ -71,24 +71,39 @@ closeEditor.addEventListener("click", function () {
     notes.classList.remove("dropNotes");
 
     editor.classList.add("riseEditor");
-    editor.classList.remove("dropEditor")
+    editor.classList.remove("dropEditor");
     setTimeout(() => {
         notes.style.display = "flex";
         editor.style.display = "none";
     }, 500);
+
+    titleGrab.value = "";
+    textGrab.value = "";
 })
 
+
+/// delete note
+
+function deleteNote(noteId){
+    notesJS.splice(noteId, 1);
+    localStorage.setItem("notesJS", JSON.stringify(notesJS));
+
+    setTimeout(() => {
+        location.reload();
+    }, 200);
+}
 /// showing notes
 
 function showNotes() {
-    notesJS.forEach((note) => {
-        let liTag = '<li class="note"><div class="note__detail"><h3 class="note__detail-title">'+ (note.title) + '</h3><span class="note__detail-snippet">' + (note.text) + '</span></div ><div class="note__extra"><button class="note__extra-settings"><ul class="menu"><li class="menu__item">Delete</li></ul></button><span class="note__extra-date">' + (note.date) + '</span></div></li > ';
+    notesJS.forEach((note, index) => {
+        let liTag = '<li class="note"><div class="note__detail"><h3 class="note__detail-title">'+ (note.title) + '</h3><span class="note__detail-snippet">' + (note.text) + '</span></div ><div class="note__extra"><button onclick= deleteNote('+ (index) +') class="note__extra-settings"><ul class="menu"><li class="menu__item">Delete</li></ul></button><span class="note__extra-date">' + (note.date) + '</span></div></li > ';
 
         notesExample.insertAdjacentHTML("afterend", liTag);
     })}
 
 showNotes();
 
+/// add button in editor
 addEditor.addEventListener("click", e => {
     e.preventDefault();
     let noteTitle = titleGrab.value;
