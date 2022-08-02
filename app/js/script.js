@@ -39,6 +39,8 @@ var editor = document.getElementById("editor");
 var notes = document.getElementById("notes");
 var notesExample = document.getElementById("notesExample");
 
+var homeButton = document.getElementById("homeButton");
+
 var closeEditor = document.getElementById("closeEditor");
 var addEditor = document.getElementById("addEditor");
 
@@ -83,6 +85,21 @@ closeEditor.addEventListener("click", function () {
     textGrab.value = "";
 })
 
+homeButton.addEventListener("click", function () {
+    notes.classList.add("riseNotes");
+    notes.classList.remove("dropNotes");
+
+    editor.classList.add("riseEditor");
+    editor.classList.remove("dropEditor");
+    setTimeout(() => {
+        notes.style.display = "flex";
+        editor.style.display = "none";
+    }, 500);
+
+    titleGrab.value = "";
+    textGrab.value = "";
+})
+
 
 /// showing notes
 
@@ -90,7 +107,7 @@ function showNotes() {
     notesJS.forEach((note, index) => {
         let liTag = '<li onclick="updateNote(' + (index) + ',` ' + (note.title) + '`,`' + (note.text) + '`)" class="note"><div class="note__detail"><h3 class="note__detail-title">'+ (note.title) + '</h3><span class="note__detail-snippet">' + (note.text) + '</span></div ><div class="note__extra"><button onclick= deleteNote('+ (index) +') class="note__extra-settings"><ul class="menu"><li class="menu__item">Delete</li></ul></button><span class="note__extra-date">' + (note.date) + '</span></div></li > ';
 
-        notesExample.insertAdjacentHTML("afterend", liTag);
+        anchorElement.insertAdjacentHTML("afterend", liTag);
     })}
 
 showNotes();
