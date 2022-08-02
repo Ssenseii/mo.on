@@ -7,7 +7,7 @@
         padding-top: 2rem;
         width: 10%;
         height: $wrappervh;
-        
+
         display: flex;
         justify-content: center;
         align-items: center;
@@ -86,7 +86,7 @@
             align-items: center;
 
             border-radius: 50px;
-            
+
             @include neuEditor;
 
             border-radius: 25px;
@@ -97,7 +97,7 @@
                 width: 90%;
                 height: 3rem;
 
-                font-size: $fnt_big;
+                font-size: $fnt_huge;
                 @include noteEditorStyle;
             }
 
@@ -110,7 +110,7 @@
                 @include noteEditorStyle;
 
                 font-family: "Raleway", sans-serif;
-
+                font-size: $fnt_big;
                 resize: none;
 
                 &:hover {
@@ -152,6 +152,37 @@
 
                     width: 2rem;
                     height: 2rem;
+
+                    overflow: none;
+                    
+                    &-icon{
+                        opacity: 0;
+                        transform: rotate(180deg);
+                        transition: transform 0.5s;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                        background: $peach;
+                    }
+
+                    &:hover > &-icon {
+                        opacity: 1;
+                        transform: rotate(45deg);
+                        transition: opacity 0.2s, transform 0.5s;
+                    }
+                }
+
+                &-BG {
+                    @include settingButton;
+
+                    width: 2rem;
+                    height: 2rem;
+
+                    &:hover {
+                        cursor: pointer;
+                        background: linear-gradient(90deg, rgba(227,96,96,1) 0%, rgba(250,255,134,1) 25%, rgba(186,249,177,1) 50%, rgba(113,184,232,1) 75%, rgba(228,88,88,1) 100%);
+                    }
                 }
             }
         }
