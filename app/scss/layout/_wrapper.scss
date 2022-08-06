@@ -210,5 +210,15 @@
                 }
             }
         }
+
+        &__main{
+            width: 100%;
+            height: auto;
+            border-radius: 0;
+
+            &-notes{
+                justify-content: center;
+            }
+        }
     }
 }
