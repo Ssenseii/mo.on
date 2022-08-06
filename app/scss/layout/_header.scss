@@ -52,8 +52,13 @@
 
 @media screen and (max-width: 870px){
     .header{
-        justify-content: flex-start;
+        justify-content: center;
         height: 6rem;
+        padding: 4rem;
+
+        &__logo{
+            margin: 0;
+        }
         &__util{
             display: none;
         }
