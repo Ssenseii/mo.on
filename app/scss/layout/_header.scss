@@ -8,6 +8,7 @@
     // margin-bottom: 1rem;
 
     &__logo {
+        margin-left: 2rem;
         width: 10%;
         height: $headervh;
         display: flex;
@@ -17,8 +18,8 @@
         &-btn{
             @include neu;
             border: none;
-            width: 5rem;
-            height: 5rem;
+            min-width: 5rem;
+            min-height: 5rem;
 
             &:hover{
                     cursor: pointer;
@@ -44,6 +45,17 @@
         justify-content: center;
         &-clock{
             margin-right: 2rem;
+        }
+    }
+}
+
+
+@media screen and (max-width: 870px){
+    .header{
+        justify-content: flex-start;
+        height: 6rem;
+        &__util{
+            display: none;
         }
     }
 }
