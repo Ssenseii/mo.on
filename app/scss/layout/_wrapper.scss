@@ -6,7 +6,6 @@
     &__aside {
         width: 10%;
         height: $wrappervh;
-        border: 1px solid red;
 
 
         display: flex;
@@ -14,10 +13,9 @@
         align-items: center;
 
         &-buttons {
-            border: 1px solid green;
+
             width: 80%;
             height: $asidevh;
-
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -52,8 +50,8 @@
                 }
 
                 &-icon {
-                    width: 3rem;
-                    height: 3rem;
+                    width: 65%;
+                    height: 65%;
                 }
             }
         }
@@ -80,7 +78,7 @@
         }
 
         &-editor {
-            width: 40%;
+            min-width: 45rem;
             height: $editorvh;
             padding: 2rem;
 
@@ -100,7 +98,7 @@
                 width: 90%;
                 height: 3rem;
 
-                font-size: $fnt_huge;
+                font-size: $fnt_big;
                 @include noteEditorStyle;
             }
 
@@ -113,7 +111,7 @@
                 @include noteEditorStyle;
 
                 font-family: "Raleway", sans-serif;
-                font-size: $fnt_big;
+                font-size: $fnt_average;
                 resize: none;
 
                 &:hover {
@@ -201,6 +199,7 @@
             height: auto;
             
             &-buttons{
+                height: auto;
                 flex-direction: row;
                 justify-content: space-evenly;
                 
@@ -222,6 +221,30 @@
             &-notes{
                 justify-content: center;
             }
+            &-editor{
+                min-width: 100%;
+            }
         }
     }
+}
+
+@media screen and (max-width: 470px){
+    .wrapper{
+        flex-flow: column nowrap;
+        
+        &__aside{
+            flex-direction: row;
+            width: 100%;
+            &-buttons{
+                flex-flow: row;
+                width: 100%;
+                
+                &-element{
+                    width: 3rem;
+                    min-height: 3rem;
+                }
+            }
+        }
+    }
+
 }

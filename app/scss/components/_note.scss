@@ -1,9 +1,7 @@
 .note {
-    max-width: 16rem;
-    min-width: 16rem;
+    width: 15rem;
 
-
-    margin: 1rem;
+    margin: 8px;
 
     border-radius: 25px;
 
@@ -14,7 +12,6 @@
     font-family: "Raleway", sans-serif;
 
     cursor: pointer;
-
 
     @include neuNote;
 
