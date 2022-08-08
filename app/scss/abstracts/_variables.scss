@@ -17,6 +17,7 @@ $dark-gray: #3c3c3c;
 /// sizes 
 $headervh : 14vh;
 $wrappervh: calc(100vh - $headervh);
+$asidevh: calc($wrappervh - 20vh);
 $editorvh: calc($wrappervh - 10vh);
 $noteEditorvh: calc($editorvh - 20vh);
 

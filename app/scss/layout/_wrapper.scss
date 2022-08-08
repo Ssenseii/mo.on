@@ -6,14 +6,17 @@
     &__aside {
         width: 10%;
         height: $wrappervh;
+        border: 1px solid red;
+
 
         display: flex;
         justify-content: center;
         align-items: center;
 
         &-buttons {
+            border: 1px solid green;
             width: 80%;
-            height: auto;
+            height: $asidevh;
 
             display: flex;
             flex-direction: column;
