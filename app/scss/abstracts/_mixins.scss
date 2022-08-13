@@ -18,6 +18,9 @@
 @mixin neuEditor {
     background: #e4e7f0;
     box-shadow: 6px 6px 12px #bbbfcf, -6px -6px 12px $lightBase;
+    @media screen and (max-width: 870px){
+        box-shadow: none;
+    }
 }
 
 @mixin noteEditorStyle {

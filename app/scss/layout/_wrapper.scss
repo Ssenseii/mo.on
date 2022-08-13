@@ -1,266 +1,249 @@
 .wrapper {
+  display: flex;
+  flex-flow: row wrap;
+
+  /// aside
+  &__aside {
+    width: 10%;
+    height: $wrappervh;
+
     display: flex;
-    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 
-    /// aside
-    &__aside {
-        width: 10%;
-        height: $wrappervh;
+    &-buttons {
+      width: 80%;
+      height: $asidevh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
+      &-element {
+        width: 4rem;
+        min-height: 4rem;
+        margin-bottom: 4rem;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        &-buttons {
-
-            width: 80%;
-            height: $asidevh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            &-element {
-                
-                width: 4rem;
-                min-height: 4rem;
-                margin-bottom: 4rem;
-
-                border: transparent;
-                border-radius: 50%;
-
-                display: flex;
-                flex-direction: column;
-                justify-content: space-evenly;
-                align-items: center;
-                @include neu;
-
-                &:hover {
-                    cursor: pointer;
-                }
-
-                &:last-child {
-                    background: $bluePastel;
-                    display: flex;
-                    margin-bottom: 0;
-                }
-
-                &:active {
-                    @include neuActive;
-                }
-
-                &-icon {
-                    width: 65%;
-                    height: 65%;
-                }
-            }
-        }
-    }
-
-    /// main
-    &__main {
-        background-color: $lightBase;
-        border-top-left-radius: 25px;
-        width: 90%;
-        height: $wrappervh;
-        padding: 2rem;
+        border: transparent;
+        border-radius: 50%;
 
         display: flex;
         flex-direction: column;
-        justify-items: center;
+        justify-content: space-evenly;
         align-items: center;
+        @include neu;
 
-        &-notes {
-            display: flex;
-            flex-flow: row wrap;
-            justify-self: flex-start;
-            align-self: flex-start;
+        &:hover {
+          cursor: pointer;
         }
 
-        &-editor {
-            min-width: 45rem;
-            height: $editorvh;
-            padding: 2rem;
-
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-
-            border-radius: 50px;
-
-            @include neuEditor;
-
-            border-radius: 25px;
-
-            font-family: "Raleway", sans-serif;
-
-            &-title {
-                width: 90%;
-                height: 3rem;
-
-                font-size: $fnt_big;
-                @include noteEditorStyle;
-            }
-
-            &-note {
-                width: 90%;
-                height: $noteEditorvh;
-                padding-top: 1rem;
-                padding-bottom: 1rem;
-
-                @include noteEditorStyle;
-
-                font-family: "Raleway", sans-serif;
-                font-size: $fnt_average;
-                resize: none;
-
-                &:hover {
-                    cursor: text;
-                }
-            }
-
-            &-buttons {
-                display: flex;
-                flex-flow: row wrap;
-                justify-content: space-between;
-                align-items: center;
-                width: 90%;
-
-                &-submit {
-                    width: 50%;
-                    height: 3rem;
-
-                    border-radius: 25px;
-                    border: 1px solid $bgColor;
-                    outline: none;
-
-                    box-shadow: 8px 7px 5px -1px rgba(183, 192, 213, 0.75);
-
-                    &:hover {
-                        cursor: pointer;
-                        border: 1px solid darken($bgColor, 50%);
-                    }
-
-                    &:active {
-                        position: relative;
-                        box-shadow: none;
-                        top: 1px;
-                    }
-                }
-
-                &-close {
-                    @include settingButton;
-
-                    width: 2rem;
-                    height: 2rem;
-
-                    overflow: none;
-                    
-                    &-icon{
-                        opacity: 0;
-                        transform: rotate(180deg);
-                        transition: transform 0.5s;
-                    }
-
-                    &:hover {
-                        cursor: pointer;
-                        background: $peach;
-                    }
-
-                    &:hover > &-icon {
-                        opacity: 1;
-                        transform: rotate(45deg);
-                        transition: opacity 0.2s, transform 0.5s;
-                    }
-                }
-
-                &-BG {
-                    @include settingButton;
-
-                    width: 2rem;
-                    height: 2rem;
-
-                    &:hover {
-                        cursor: pointer;
-                        background: linear-gradient(90deg, rgba(227,96,96,1) 0%, rgba(250,255,134,1) 25%, rgba(186,249,177,1) 50%, rgba(113,184,232,1) 75%, rgba(228,88,88,1) 100%);
-                    }
-                }
-            }
+        &:last-child {
+          background: $bluePastel;
+          display: flex;
+          margin-bottom: 0;
         }
+
+        &:active {
+          @include neuActive;
+        }
+
+        &-icon {
+          width: 65%;
+          height: 65%;
+        }
+      }
     }
+  }
+
+  /// main
+  &__main {
+    background-color: $lightBase;
+    border-top-left-radius: 25px;
+    width: 90%;
+    height: $wrappervh;
+    padding: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+    &-notes {
+      display: flex;
+      flex-flow: row wrap;
+      justify-self: flex-start;
+      align-self: flex-start;
+    }
+
+    &-editor {
+      min-width: 45rem;
+      height: $editorvh;
+      padding: 2rem;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include neuEditor;
+
+      border-radius: 25px;
+
+      font-family: "Raleway", sans-serif;
+
+      &-title {
+        width: 90%;
+        height: 3rem;
+
+        font-size: $fnt_big;
+        @include noteEditorStyle;
+      }
+
+      &-note {
+        width: 90%;
+        height: $noteEditorvh;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        @include noteEditorStyle;
+
+        font-family: "Raleway", sans-serif;
+        font-size: $fnt_average;
+        resize: none;
+
+        &:hover {
+          cursor: text;
+        }
+      }
+
+      &-buttons {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+
+        &-submit {
+          width: 50%;
+          height: 3rem;
+
+          border-radius: 25px;
+          border: 1px solid $bgColor;
+          outline: none;
+
+          box-shadow: 8px 7px 5px -1px rgba(183, 192, 213, 0.75);
+
+          &:hover {
+            cursor: pointer;
+            border: 1px solid darken($bgColor, 50%);
+          }
+
+          &:active {
+            position: relative;
+            box-shadow: none;
+            top: 1px;
+          }
+        }
+
+        &-close {
+          @include settingButton;
+
+          width: 2rem;
+          height: 2rem;
+
+          overflow: none;
+
+          &-icon {
+            opacity: 0;
+            transform: rotate(180deg);
+            transition: transform 0.5s;
+          }
+
+          &:hover {
+            cursor: pointer;
+            background: $peach;
+          }
+
+          &:hover > &-icon {
+            opacity: 1;
+            transform: rotate(45deg);
+            transition: opacity 0.2s, transform 0.5s;
+          }
+        }
+      }
+    }
+  }
 }
 
-@media screen and (max-width: 870px){
-    .wrapper{
-        flex-flow: column nowrap;
+@media screen and (max-width: 870px) {
+  .wrapper {
+    flex-flow: column nowrap;
 
-        &__aside{
-            width: 100%;
-            height: auto;
-            
-            &-buttons{
-                height: auto;
-                flex-direction: row;
-                justify-content: space-evenly;
-                
+    &__aside {
+      width: 100%;
+      height: auto;
 
-                &-element{
-                    margin-bottom: 2rem;
-                    &:last-child{
-                        margin-bottom: 2rem;
-                    }
-                }
-            }
+      &-buttons {
+        height: auto;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        &-element {
+          margin-bottom: 2rem;
+          &:last-child {
+            margin-bottom: 2rem;
+          }
         }
-
-        &__main{
-            width: 100%;
-            height: auto;
-            border-radius: 0;
-
-            &-notes{
-                justify-content: center;
-            }
-            &-editor{
-                min-width: 100%;
-            }
-        }
+      }
     }
+
+    &__main {
+      width: 100%;
+      height: auto;
+      border-radius: 0;
+      padding: 0;
+
+      &-notes {
+        justify-content: flex-start;
+      }
+      &-editor {
+        min-width: 100%;
+        border-radius: 0;
+        padding: 1rem;
+      }
+    }
+  }
 }
 
-@media screen and (max-width: 470px){
-    .wrapper{
-        flex-flow: column nowrap;
-        
-        &__aside{
-            flex-direction: row;
-            width: 100%;
-            &-buttons{
-                flex-flow: row;
-                width: 100%;
-                
-                &-element{
-                    width: 3rem;
-                    min-height: 3rem;
-                }
-            }
-        }
+@media screen and (max-width: 470px) {
+  .wrapper {
+    flex-flow: column nowrap;
 
-        
-        &__main{
-            width: 100%;
-            height: auto;
-            border-radius: 0;
+    &__aside {
+      flex-direction: row;
+      width: 100%;
+      &-buttons {
+        flex-flow: row;
+        width: 100%;
 
-            &-notes{
-                width: 100%;
-                justify-content: center;
-            }
-            &-editor{
-                width: 100%;
-            }
+        &-element {
+          width: 3rem;
+          min-height: 3rem;
         }
-    
+      }
     }
 
+    &__main {
+      width: 100%;
+      height: auto;
+      border-radius: 0;
+      padding: 0;
+
+      &-notes {
+        width: 100%;
+        justify-content: center;
+      }
+      &-editor {
+        width: 100%;
+      }
+    }
+  }
 }
