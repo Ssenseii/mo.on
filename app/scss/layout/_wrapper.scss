@@ -245,6 +245,22 @@
                 }
             }
         }
+
+        
+        &__main{
+            width: 100%;
+            height: auto;
+            border-radius: 0;
+
+            &-notes{
+                width: 100%;
+                justify-content: center;
+            }
+            &-editor{
+                width: 100%;
+            }
+        }
+    
     }
 
 }
