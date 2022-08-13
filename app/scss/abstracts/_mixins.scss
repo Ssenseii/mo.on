@@ -1,23 +1,23 @@
 @mixin neu {
     border-radius: 50%;
-    background: #d3d9e7;
-    box-shadow: 26px 26px 51px #c2c8d5, -26px -26px 51px #e4eaf9;
+    background: $base;
+    box-shadow: 26px 26px 51px darken($base, 7%), -26px -26px 51px lighten($base, 7%);
 }
 
 @mixin neuActive {
     border-radius: 50%;
-    background: linear-gradient(145deg, #bec3d0, #e2e8f7);
-    box-shadow: 26px 26px 51px #c2c8d5, -26px -26px 51px #e4eaf9;
+    background: linear-gradient(145deg, $base, lighten($base, 7%));
+    box-shadow: 26px 26px 51px darken($base, 7%), -26px -26px 51px lighten($base, 7%);
 }
 
 @mixin neuNote {
-    background: linear-gradient(145deg, $lightBase, #cdd0d8);
-    box-shadow: 20px 20px 60px #d4d7df, -20px -20px 60px $lighterBase;
+    background: linear-gradient(145deg, $lightBase, $base);
+    box-shadow: 20px 20px 60px darken($base, 7%), -20px -20px 60px $lighterBase;
 }
 
 @mixin neuEditor {
-    background: #e4e7f0;
-    box-shadow: 6px 6px 12px #bbbfcf, -6px -6px 12px $lightBase;
+    background: $base;
+    box-shadow: 6px 6px 12px darken($base, 7%), -6px -6px 12px lighten($base, 7%);
     @media screen and (max-width: 870px){
         box-shadow: none;
     }
@@ -27,21 +27,20 @@
     padding-inline: 1rem;
     margin-bottom: 1rem;
 
-    border: 1px solid darken($bgColor, 10%);
+    border: 1px solid darken($base, 10%);
     border-radius: 25px;
     outline: none;
 
-    background-color: lighten($bgColor, 10%);
+    background-color: lighten($base, 10%);
 }
 
 @mixin settingButton {
-    border: 1px solid darken($bgColor, 25%);
+    border: 1px solid darken($base, 25%);
     border-radius: 50%;
 
     width: 1rem;
     height: 1rem;
 
     background-color: transparent;
-
 
 }

@@ -1,167 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="app/images/favicon/apple-touch-icon.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="app/images/favicon/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="app/images/favicon/favicon-16x16.png"
-        />
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>mo.on</title>
 
-        <!-- fonts -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap"
-            rel="stylesheet"
-        />
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="app/images/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="app/images/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="app/images/favicon/favicon-16x16.png" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mo.on | Easy Communication Made Stylish</title>
 
-        <!-- font-family: 'Yuji Boku', serif; -->
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Yuji+Boku&display=swap" rel="stylesheet" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700;900&display=swap"
-            rel="stylesheet"
-        />
+    <!-- font-family: 'Yuji Boku', serif; -->
 
-        <!-- font-family: 'Raleway', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700;900&display=swap"
+        rel="stylesheet" />
 
-        <link rel="stylesheet" href="dist/style.css" />
-    </head>
-    <body>
-        <!-- header -->
-        <header class="header">
-            <div class="header__logo">
-                <button id="homeButton" class="header__logo-btn">
-                    <h1 class="header__logo-btn-text">月</h1>
-                </button>
-            </div>
-            <!-- header utilities -->
-            <div class="header__util">
-                <!-- clock -->
-                <div class="header__util-clock">
-                    <div class="clock">
-                        <div class="outer-clock-face">
-                            <div class="inner-clock-face">
-                                <div class="hand hour-hand"></div>
-                                <div class="hand min-hand"></div>
-                                <div class="hand second-hand"></div>
-                            </div>
+    <!-- font-family: 'Raleway', sans-serif; -->
+
+    <link rel="stylesheet" href="dist/style.css" />
+</head>
+
+<body>
+    <!-- header -->
+    <header class="header">
+        <div class="header__logo">
+            <button id="homeButton" class="header__logo-btn">
+                <h1 class="header__logo-btn-text">月</h1>
+            </button>
+        </div>
+        <!-- header utilities -->
+        <div class="header__util">
+            <!-- clock -->
+            <div class="header__util-clock">
+                <div class="clock">
+                    <div class="outer-clock-face">
+                        <div class="inner-clock-face">
+                            <div class="hand hour-hand"></div>
+                            <div class="hand min-hand"></div>
+                            <div class="hand second-hand"></div>
                         </div>
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>
 
-        <!-- wrapper -->
-        <wrapper class="wrapper">
-            <aside class="wrapper__aside">
-                <div class="wrapper__aside-buttons">
-                    <button class="wrapper__aside-buttons-element">
-                        <img
-                            class="wrapper__aside-buttons-element-icon"
-                            src="app/images/icons/search.png"
-                            alt="search"
-                        />
-                    </button>
-                    <button class="wrapper__aside-buttons-element">
-                        <img
-                            style= "width: 65%; height: 65%;"
-                            class="wrapper__aside-buttons-element-icon"
-                            src="app/images/icons/theme.png"
-                            alt="search"
-                        />
-                    </button>
-                    <button class="wrapper__aside-buttons-element">
-                        <img
-                            style= "width: 65%; height: 65%;"
-                            class="wrapper__aside-buttons-element-icon"
-                            src="app/images/icons/archive.png"
-                            alt="search"
-                        />
-                    </button>
-                    <button class="wrapper__aside-buttons-element">
-                        <img
-                            style= "width: 65%; height: 65%;"
-                            class="wrapper__aside-buttons-element-icon"
-                            src="app/images/icons/sort.png"
-                            alt="search"
-                        />
-                    </button>
-                    <button id="addNote" class="wrapper__aside-buttons-element">
-                        <img
-                            class="wrapper__aside-buttons-element-icon add"
-                            src="app/images/icons/add.png"
-                            alt="search"
-                        />
+    <!-- wrapper -->
+    <wrapper class="wrapper">
+        <aside class="wrapper__aside">
+            <div class="wrapper__aside-buttons">
+                <button class="wrapper__aside-buttons-element">
+                    <img class="wrapper__aside-buttons-element-icon" src="app/images/icons/search.png" alt="search" />
+                </button>
+                <button class="wrapper__aside-buttons-element">
+                    <img style="width: 65%; height: 65%;" class="wrapper__aside-buttons-element-icon"
+                        src="app/images/icons/theme.png" alt="search" />
+                </button>
+                <button class="wrapper__aside-buttons-element">
+                    <img style="width: 65%; height: 65%;" class="wrapper__aside-buttons-element-icon"
+                        src="app/images/icons/archive.png" alt="search" />
+                </button>
+                <button class="wrapper__aside-buttons-element">
+                    <img style="width: 65%; height: 65%;" class="wrapper__aside-buttons-element-icon"
+                        src="app/images/icons/sort.png" alt="search" />
+                </button>
+                <button id="addNote" class="wrapper__aside-buttons-element">
+                    <img class="wrapper__aside-buttons-element-icon add" src="app/images/icons/add.png" alt="search" />
+                </button>
+            </div>
+        </aside>
+        <main class="wrapper__main">
+
+            <!-- editor -->
+
+            <form style="display: none" id="editor" class="wrapper__main-editor">
+                <input id="titleGrab" type="text" class="wrapper__main-editor-title" autocomplete="off" />
+                <textarea id="textGrab" class="wrapper__main-editor-note" name="note" id="noteWriter" cols="30"
+                    rows="10"></textarea>
+                <div class="wrapper__main-editor-buttons">
+                    <input id="addEditor" value="Add to Notes" type="button"
+                        class="wrapper__main-editor-buttons-submit" />
+                    <button id="closeEditor" class="wrapper__main-editor-buttons-close">
+                        <img class="wrapper__main-editor-buttons-close-icon" width="100%" src="app/images/icons/add.png"
+                            alt="">
                     </button>
                 </div>
-            </aside>
-            <main class="wrapper__main">
+            </form>
 
-                <!-- editor -->
-                
-                <form
-                    style="display: none"
-                    id="editor"
-                    class="wrapper__main-editor"
-                >
-                    <input
-                        id="titleGrab"
-                        type="text"
-                        class="wrapper__main-editor-title"
-                        autocomplete="off"
-                    />
-                    <textarea
-                        id="textGrab"
-                        class="wrapper__main-editor-note"
-                        name="note"
-                        id="noteWriter"
-                        cols="30"
-                        rows="10"
-                    ></textarea>
-                    <div class="wrapper__main-editor-buttons">
-                        <input
-                            id="addEditor"
-                            value="Add to Notes"
-                            type="button"
-                            class="wrapper__main-editor-buttons-submit"
-                        />
-                        <button
-                            id="closeEditor"
-                            class="wrapper__main-editor-buttons-close"
-                        >
-                            <img class="wrapper__main-editor-buttons-close-icon" width="100%" src="app/images/icons/add.png" alt="">
-                        </button>
-                    </div>
-                </form>
-
-                <!-- control panel -->
+            <!-- control panel -->
 
 
-                <!-- notes -->
-                <ul id="notes" class="wrapper__main-notes">
-                    <li id="anchorElement"></li>
-                </ul>
-            </main>
-        </wrapper>
-    </body>
-    <script src="app/js/script.js"></script>
-    <script src="app/js/buttons.js"></script>
+            <!-- notes -->
+            <ul id="notes" class="wrapper__main-notes">
+                <li id="anchorElement"></li>
+            </ul>
+        </main>
+    </wrapper>
+</body>
+<script src="app/js/script.js"></script>
+<script src="app/js/buttons.js"></script>
+
 </html>
