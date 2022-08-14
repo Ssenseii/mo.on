@@ -167,3 +167,14 @@ function updateNote(noteId, title, text) {
     textGrab.value = text;
 }
 
+
+
+/// sort note
+
+function sortNotes(){
+    notesJS.sort()
+    let z = typeof(notesJS)
+    console.log(z);
+    window.alert("clicked");
+}
+
