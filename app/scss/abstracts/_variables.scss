@@ -5,9 +5,10 @@ $peach: #fb5849;
 $light-peach: #fc6476;
     ///blue
     /// #D3D9E7 light base color
+    /// #d2ddf6 this is a pretty color
     /// #222 dark base color
 
-$base: #D3D9E7;
+$base: #d2ddf6;
 $darkBase: #222;
 $lightBase: lighten($base, 5%);
 $lighterBase: lighten($base, 7%);

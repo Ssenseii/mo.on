@@ -172,9 +172,14 @@ function updateNote(noteId, title, text) {
 /// sort note
 
 function sortNotes(){
-    notesJS.sort()
-    let z = typeof(notesJS)
-    console.log(z);
-    window.alert("clicked");
+    window.alert("clicked")
+    console.log(typeof(notesJS))
+    console.log(notesJS)
+    notesJS.sort(function (a, b) {
+        let x = a.title.toLowerCase();
+        let y = b.title.toLowerCase();
+        if (x < y) { return -1; }
+        if (x > y) { return 1; }
+        return 0; });;
 }
 
