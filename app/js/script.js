@@ -1,5 +1,3 @@
-import base from './scss/abstracts/_variables.scss'
-
  /// analogue clock
 
 const secondHand = document.querySelector('.second-hand');
@@ -189,3 +187,8 @@ function sortNotes(){
 ///switch colors;
 
 
+const themes = document.getElementById("themes")
+
+themes.addEventListener("click", function(){
+    
+})
