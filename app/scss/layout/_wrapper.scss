@@ -56,7 +56,7 @@
 
     /// main
     &__main {
-        background-color: $lightBase;
+        background-color: customLighten(--base, 5);
         border-top-left-radius: 25px;
         width: 90%;
         height: $wrappervh;

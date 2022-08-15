@@ -1,3 +1,17 @@
+@function customDarken($color-variable, $value) {
+    $color-variable-h: var(#{$color-variable + "-h"});
+    $color-variable-s: var(#{$color-variable + "-s"});
+    $color-variable-l: calc(var(#{$color-variable + "-l"}) - #{$value+"%"});
+    @return hsl($color-variable-h, $color-variable-s, $color-variable-l);
+}
+
+@function customLighten($color-variable, $value) {
+    $color-variable-h: var(#{$color-variable + "-h"});
+    $color-variable-s: var(#{$color-variable + "-s"});
+    $color-variable-l: calc(var(#{$color-variable + "-l"}) + #{$value+"%"});
+    @return hsl($color-variable-h, $color-variable-s, $color-variable-l);
+}
+
 // colors
     ///red 
 $g-peach: linear-gradient(40deg, rgba(252,100,118,1) 0%, rgba(251,88,73,1) 100%);
@@ -8,11 +22,20 @@ $light-peach: #fc6476;
     /// #d2ddf6 this is a pretty color
     /// #222 dark base color
     
-:root {
-    --main-bg-color: #d2ddf6;
+
+:root{
+    --base: hsl(222, 67%, 89%);
+    --base-h: 222;
+    --base-s: 67%;
+    --base-l: 89%;
 }
 
+
+
 $base: #d2ddf6;
+
+
+
 $darkBase: #222;
 $lightBase: lighten($base, 5%);
 $lighterBase: lighten($base, 7%);
@@ -40,3 +63,4 @@ $fnt_small: 12px;
 $fnt_average: 16px;
 $fnt_big: 20px;
 $fnt_huge: 36px;
+

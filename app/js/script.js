@@ -1,3 +1,5 @@
+import base from './scss/abstracts/_variables.scss'
+
  /// analogue clock
 
 const secondHand = document.querySelector('.second-hand');
@@ -182,4 +184,8 @@ function sortNotes(){
         if (x > y) { return 1; }
         return 0; });;
 }
+
+
+///switch colors;
+
 
