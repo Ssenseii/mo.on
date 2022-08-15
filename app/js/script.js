@@ -334,7 +334,7 @@ bg15.addEventListener("click", function(){
     document.documentElement.style.setProperty('--base-h', '0');
     document.documentElement.style.setProperty('--base-s', '0%');
     document.documentElement.style.setProperty('--base-l', '19%');
-    document.body.style.color = "#aaa";
+    document.documentElement.style.color = "#aaa";
 
 })
 
