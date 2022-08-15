@@ -188,7 +188,14 @@ function sortNotes(){
 
 
 const themes = document.getElementById("themes")
+const themeOptions = document.getElementById("themeOptions");
+const closeThemeOptions = document.getElementById("closeThemeOptions");
 
 themes.addEventListener("click", function(){
+    themeOptions.style.display= "grid";
     
+})
+
+closeThemeOptions.addEventListener("click", function(){
+    themeOptions.style.display= "none";
 })

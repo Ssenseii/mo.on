@@ -176,8 +176,8 @@
 
         &-themes{
             width: 50%;
-            height: 8rem;
-            background-color: #fff;
+            height: auto;
+            background-color: customLighten(--base, 8);
 
             position: absolute;
             bottom: 50%;
@@ -187,7 +187,10 @@
             justify-content: space-evenly;
             align-items: center;
 
+            border-radius: 25px;
+
             &-elements{
+                margin: 1rem;
                 display: flex;
                 align-self: center;
                 justify-self: center;
@@ -195,6 +198,15 @@
                 height: 50px;
                 border-radius: 50%;
                 border: 1px solid #777;
+
+                &:hover{
+                    cursor: pointer;
+                    border: 2px solid #777;
+                }
+
+                &-closeIcon{
+                    transform: rotate(45deg);
+                }
             }
         }
     }
@@ -294,4 +306,9 @@
 .bg13{background-color: #d3d2f6;;}
 .bg14{background-color: #f5f5ff;;}
 .bg15{background-color: #aaa;}
-.bg16{background-color: #3a3a3a;}
+
+.bg16{
+    background-color: transparent;
+    width: 40px;
+    height: 40px;
+}
