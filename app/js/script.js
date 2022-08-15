@@ -190,6 +190,7 @@ function sortNotes(){
 const themes = document.getElementById("themes")
 const themeOptions = document.getElementById("themeOptions");
 const closeThemeOptions = document.getElementById("closeThemeOptions");
+const header = document.getElementById("header");
 
 const bg1 = document.getElementById("bg1");
 const bg2 = document.getElementById("bg2");
@@ -221,6 +222,7 @@ bg1.addEventListener("click", function(){
     document.documentElement.style.setProperty('--base-h', '222');
     document.documentElement.style.setProperty('--base-s', '67%');
     document.documentElement.style.setProperty('--base-l', '89%');
+    document.documentElement.style.color = "#000";
 })
 
 bg2.addEventListener("click", function(){
@@ -228,6 +230,7 @@ bg2.addEventListener("click", function(){
     document.documentElement.style.setProperty('--base-h', '175');
     document.documentElement.style.setProperty('--base-s', '67%');
     document.documentElement.style.setProperty('--base-l', '89%');
+    document.documentElement.style.color = "#000";
 })
 
 bg3.addEventListener("click", function(){
@@ -235,6 +238,7 @@ bg3.addEventListener("click", function(){
     document.documentElement.style.setProperty('--base-h', '110');
     document.documentElement.style.setProperty('--base-s', '67%');
     document.documentElement.style.setProperty('--base-l', '89%');
+    document.documentElement.style.color = "#000";
 })
 
 bg4.addEventListener("click", function(){
@@ -242,6 +246,7 @@ bg4.addEventListener("click", function(){
     document.documentElement.style.setProperty('--base-h', '67');
     document.documentElement.style.setProperty('--base-s', '67%');
     document.documentElement.style.setProperty('--base-l', '89%');
+    document.documentElement.style.color = "#000";
 })
 
 bg5.addEventListener("click", function(){
@@ -249,6 +254,7 @@ bg5.addEventListener("click", function(){
     document.documentElement.style.setProperty('--base-h', '42');
     document.documentElement.style.setProperty('--base-s', '67%');
     document.documentElement.style.setProperty('--base-l', '89%');
+    document.documentElement.style.color = "#000";
 })
 
 bg6.addEventListener("click", function(){
@@ -256,6 +262,7 @@ bg6.addEventListener("click", function(){
     document.documentElement.style.setProperty('--base-h', '17');
     document.documentElement.style.setProperty('--base-s', '67%');
     document.documentElement.style.setProperty('--base-l', '89%');
+    document.documentElement.style.color = "#000";
 })
 
 bg7.addEventListener("click", function(){
@@ -263,6 +270,7 @@ bg7.addEventListener("click", function(){
     document.documentElement.style.setProperty('--base-h', '0');
     document.documentElement.style.setProperty('--base-s', '67%');
     document.documentElement.style.setProperty('--base-l', '89%');
+    document.documentElement.style.color = "#000";
 })
 
 bg8.addEventListener("click", function(){
@@ -270,6 +278,7 @@ bg8.addEventListener("click", function(){
     document.documentElement.style.setProperty('--base-h', '337');
     document.documentElement.style.setProperty('--base-s', '67%');
     document.documentElement.style.setProperty('--base-l', '89%');
+    document.documentElement.style.color = "#000";
 })
 
 bg9.addEventListener("click", function(){
@@ -277,6 +286,7 @@ bg9.addEventListener("click", function(){
     document.documentElement.style.setProperty('--base-h', '310');
     document.documentElement.style.setProperty('--base-s', '67%');
     document.documentElement.style.setProperty('--base-l', '89%');
+    document.documentElement.style.color = "#000";
 })
 
 bg10.addEventListener("click", function(){
@@ -284,6 +294,7 @@ bg10.addEventListener("click", function(){
     document.documentElement.style.setProperty('--base-h', '290');
     document.documentElement.style.setProperty('--base-s', '67%');
     document.documentElement.style.setProperty('--base-l', '89%');
+    document.documentElement.style.color = "#000";
 })
 
 bg11.addEventListener("click", function(){
@@ -291,6 +302,7 @@ bg11.addEventListener("click", function(){
     document.documentElement.style.setProperty('--base-h', '273');
     document.documentElement.style.setProperty('--base-s', '67%');
     document.documentElement.style.setProperty('--base-l', '89%');
+    document.documentElement.style.color = "#000";
 })
 
 bg12.addEventListener("click", function(){
@@ -298,6 +310,7 @@ bg12.addEventListener("click", function(){
     document.documentElement.style.setProperty('--base-h', '253');
     document.documentElement.style.setProperty('--base-s', '67%');
     document.documentElement.style.setProperty('--base-l', '89%');
+    document.documentElement.style.color = "#000";
 })
 
 bg13.addEventListener("click", function(){
@@ -305,6 +318,7 @@ bg13.addEventListener("click", function(){
     document.documentElement.style.setProperty('--base-h', '242');
     document.documentElement.style.setProperty('--base-s', '67%');
     document.documentElement.style.setProperty('--base-l', '89%');
+    document.documentElement.style.color = "#000";
 })
 
 bg14.addEventListener("click", function(){
@@ -312,6 +326,7 @@ bg14.addEventListener("click", function(){
     document.documentElement.style.setProperty('--base-h', '240');
     document.documentElement.style.setProperty('--base-s', '100%');
     document.documentElement.style.setProperty('--base-l', '98%');
+    document.documentElement.style.color = "#000";
 })
 
 bg15.addEventListener("click", function(){
@@ -319,6 +334,7 @@ bg15.addEventListener("click", function(){
     document.documentElement.style.setProperty('--base-h', '0');
     document.documentElement.style.setProperty('--base-s', '0%');
     document.documentElement.style.setProperty('--base-l', '19%');
-    document.documentElement.style.color = "#aaa";
+    document.body.style.color = "#aaa";
+
 })
 
