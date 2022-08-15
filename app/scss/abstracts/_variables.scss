@@ -30,15 +30,8 @@ $light-peach: #fc6476;
     --base-l: 89%;
 }
 
-
-
-$base: hsl(222, 67%, 89%);
-
-
-
-$darkBase: #222;
-$lightBase: lighten($base, 5%);
-$lighterBase: lighten($base, 7%);
+$lightBase: customLighten(--base, 5);
+$lighterBase: customLighten(--base, 7);
 $bluePastel: #66c0dc;
 
     ///gray

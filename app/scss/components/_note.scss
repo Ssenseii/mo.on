@@ -73,9 +73,9 @@
     top: 1rem;
     left: 1rem;
 
-    background-color: lighten($base, 10%);
+    background-color: customLighten(--base, 10);
 
-    border: 1px solid darken($base, 50%);
+    border: 1px solid customDarken(--base, 50);
     border-top-right-radius: 25px;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;

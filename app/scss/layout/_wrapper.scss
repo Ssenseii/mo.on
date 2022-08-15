@@ -56,8 +56,8 @@
 
     /// main
     &__main {
-        // background-color: customLighten(--base, 5);
-        background-color: lighten($base, 5%);
+        
+        background-color: customLighten(--base, 5);
         border-top-left-radius: 25px;
         width: 90%;
         height: $wrappervh;
@@ -127,16 +127,16 @@
                     height: 3rem;
 
                     border-radius: 25px;
-                    border: 1px solid darken($base, 5%);
+                    border: 1px solid customDarken(--base, 5);
                     outline: none;
 
-                    box-shadow: 8px 7px 5px -1px lighten($base, 7%);
+                    box-shadow: 8px 7px 5px -1px customLighten(--base, 7);
 
-                    background-color: lighten($base, 7%);
+                    background-color: customLighten(--base, 7);
 
                     &:hover {
                         cursor: pointer;
-                        border: 1px solid darken($base, 50%);
+                        border: 1px solid customLighten(--base, 50);
                     }
 
                     &:active {
@@ -291,21 +291,21 @@
     }
 }
 
-.bg1{background-color: hsl(222, 67%, 89%);}
-.bg2{background-color: hsl(175, 67%, 89%);}
-.bg3{background-color: hsl(110, 67%, 89%);}
-.bg4{background-color: hsl(67, 67%, 89%);}
-.bg5{background-color: #f6ebd2;}
-.bg6{background-color: #f6dcd2;}
-.bg7{background-color: #f6d2d2;}
-.bg8{background-color: #f6d2e0;}
-.bg9{background-color: #f6d2f0;}
-.bg10{background-color: #f0d2f6;}
-.bg11{background-color: #e6d2f6;}
-.bg12{background-color: #dad2f6;}
-.bg13{background-color: #d3d2f6;;}
-.bg14{background-color: #f5f5ff;;}
-.bg15{background-color: #aaa;}
+#bg1{background-color: hsl(222, 67%, 89%);}
+#bg2{background-color: hsl(175, 67%, 89%);}
+#bg3{background-color: hsl(110, 67%, 89%);}
+#bg4{background-color: hsl(67, 67%, 89%);}
+#bg5{background-color: hsl(42, 67%, 89%);}
+#bg6{background-color: hsl(17, 67%, 89%);}
+#bg7{background-color: hsl(0, 67%, 89%);}
+#bg8{background-color: hsl(337, 67%, 89%);}
+#bg9{background-color: hsl(310, 67%, 89%);}
+#bg10{background-color: hsl(290, 67%, 89%);}
+#bg11{background-color: hsl(273, 67%, 89%);}
+#bg12{background-color: hsl(253, 67%, 89%);}
+#bg13{background-color: hsl(242, 67%, 89%);;}
+#bg14{background-color: hsl(240, 100%, 98%);;}
+#bg15{background-color: hsl(0, 0%, 19%);}
 
 .bg16{
     background-color: transparent;

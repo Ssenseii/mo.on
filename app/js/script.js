@@ -191,6 +191,22 @@ const themes = document.getElementById("themes")
 const themeOptions = document.getElementById("themeOptions");
 const closeThemeOptions = document.getElementById("closeThemeOptions");
 
+const bg1 = document.getElementById("bg1");
+const bg2 = document.getElementById("bg2");
+const bg3 = document.getElementById("bg3");
+const bg4 = document.getElementById("bg4");
+const bg5 = document.getElementById("bg5");
+const bg6 = document.getElementById("bg6");
+const bg7 = document.getElementById("bg7");
+const bg8 = document.getElementById("bg8");
+const bg9 = document.getElementById("bg9");
+const bg10 = document.getElementById("bg10");
+const bg11 = document.getElementById("bg11");
+const bg12 = document.getElementById("bg12");
+const bg13 = document.getElementById("bg13");
+const bg14 = document.getElementById("bg14");
+const bg15 = document.getElementById("bg15");
+
 themes.addEventListener("click", function(){
     themeOptions.style.display= "grid";
     
@@ -199,3 +215,110 @@ themes.addEventListener("click", function(){
 closeThemeOptions.addEventListener("click", function(){
     themeOptions.style.display= "none";
 })
+
+bg1.addEventListener("click", function(){
+    document.documentElement.style.setProperty('--base', 'hsl(222, 67%, 89%)');
+    document.documentElement.style.setProperty('--base-h', '222');
+    document.documentElement.style.setProperty('--base-s', '67%');
+    document.documentElement.style.setProperty('--base-l', '89%');
+})
+
+bg2.addEventListener("click", function(){
+    document.documentElement.style.setProperty('--base', 'hsl(175, 67%, 89%)');
+    document.documentElement.style.setProperty('--base-h', '175');
+    document.documentElement.style.setProperty('--base-s', '67%');
+    document.documentElement.style.setProperty('--base-l', '89%');
+})
+
+bg3.addEventListener("click", function(){
+    document.documentElement.style.setProperty('--base', 'hsl(110, 67%, 89%)');
+    document.documentElement.style.setProperty('--base-h', '110');
+    document.documentElement.style.setProperty('--base-s', '67%');
+    document.documentElement.style.setProperty('--base-l', '89%');
+})
+
+bg4.addEventListener("click", function(){
+    document.documentElement.style.setProperty('--base', 'hsl(67, 67%, 89%)');
+    document.documentElement.style.setProperty('--base-h', '67');
+    document.documentElement.style.setProperty('--base-s', '67%');
+    document.documentElement.style.setProperty('--base-l', '89%');
+})
+
+bg5.addEventListener("click", function(){
+    document.documentElement.style.setProperty('--base', 'hsl(42, 67%, 89%)');
+    document.documentElement.style.setProperty('--base-h', '42');
+    document.documentElement.style.setProperty('--base-s', '67%');
+    document.documentElement.style.setProperty('--base-l', '89%');
+})
+
+bg6.addEventListener("click", function(){
+    document.documentElement.style.setProperty('--base', 'hsl(17, 67%, 89%)');
+    document.documentElement.style.setProperty('--base-h', '17');
+    document.documentElement.style.setProperty('--base-s', '67%');
+    document.documentElement.style.setProperty('--base-l', '89%');
+})
+
+bg7.addEventListener("click", function(){
+    document.documentElement.style.setProperty('--base', 'hsl(0, 67%, 89%)');
+    document.documentElement.style.setProperty('--base-h', '0');
+    document.documentElement.style.setProperty('--base-s', '67%');
+    document.documentElement.style.setProperty('--base-l', '89%');
+})
+
+bg8.addEventListener("click", function(){
+    document.documentElement.style.setProperty('--base', 'hsl(337, 67%, 89%)');
+    document.documentElement.style.setProperty('--base-h', '337');
+    document.documentElement.style.setProperty('--base-s', '67%');
+    document.documentElement.style.setProperty('--base-l', '89%');
+})
+
+bg9.addEventListener("click", function(){
+    document.documentElement.style.setProperty('--base', 'hsl(310, 67%, 89%)');
+    document.documentElement.style.setProperty('--base-h', '310');
+    document.documentElement.style.setProperty('--base-s', '67%');
+    document.documentElement.style.setProperty('--base-l', '89%');
+})
+
+bg10.addEventListener("click", function(){
+    document.documentElement.style.setProperty('--base', 'hsl(290, 67%, 89%)');
+    document.documentElement.style.setProperty('--base-h', '290');
+    document.documentElement.style.setProperty('--base-s', '67%');
+    document.documentElement.style.setProperty('--base-l', '89%');
+})
+
+bg11.addEventListener("click", function(){
+    document.documentElement.style.setProperty('--base', 'hsl(273, 67%, 89%)');
+    document.documentElement.style.setProperty('--base-h', '273');
+    document.documentElement.style.setProperty('--base-s', '67%');
+    document.documentElement.style.setProperty('--base-l', '89%');
+})
+
+bg12.addEventListener("click", function(){
+    document.documentElement.style.setProperty('--base', 'hsl(253, 67%, 89%)');
+    document.documentElement.style.setProperty('--base-h', '253');
+    document.documentElement.style.setProperty('--base-s', '67%');
+    document.documentElement.style.setProperty('--base-l', '89%');
+})
+
+bg13.addEventListener("click", function(){
+    document.documentElement.style.setProperty('--base', 'hsl(242, 67%, 89%)');
+    document.documentElement.style.setProperty('--base-h', '242');
+    document.documentElement.style.setProperty('--base-s', '67%');
+    document.documentElement.style.setProperty('--base-l', '89%');
+})
+
+bg14.addEventListener("click", function(){
+    document.documentElement.style.setProperty('--base', 'hsl(240, 100%, 98%)');
+    document.documentElement.style.setProperty('--base-h', '240');
+    document.documentElement.style.setProperty('--base-s', '100%');
+    document.documentElement.style.setProperty('--base-l', '98%');
+})
+
+bg15.addEventListener("click", function(){
+    document.documentElement.style.setProperty('--base', 'hsl(0, 0%, 19%)');
+    document.documentElement.style.setProperty('--base-h', '0');
+    document.documentElement.style.setProperty('--base-s', '0%');
+    document.documentElement.style.setProperty('--base-l', '19%');
+    document.documentElement.style.color = "#aaa";
+})
+
